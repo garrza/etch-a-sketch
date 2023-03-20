@@ -1,0 +1,26 @@
+html,
+body {
+    margin: 0px;
+}
+
+.container {
+    height: 100vh;
+    background-color: blue;
+    
+}
+
+.square {
+    width: 25%;
+    height: 25%;
+    outline: 1px solid;
+    color: white;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hover {
+    background-color: aliceblue;
+    color: black;
+}
