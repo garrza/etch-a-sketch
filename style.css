@@ -3,10 +3,19 @@ body {
     margin: 0px;
 }
 
+.btn {
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btn:hover {
+    color:white;
+    font-weight: bold;
+}
 .container {
     height: 100vh;
     background-color: blue;
-    
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .square {
@@ -22,5 +31,4 @@ body {
 
 .hover {
     background-color: aliceblue;
-    color: black;
 }
