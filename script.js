@@ -1,27 +1,37 @@
 const container = document.querySelector(".container")
 const btn = document.querySelector(".btn");
-let dimensions = 16;
+let dimensions = 16*16;
 createGrid(dimensions);
-
-const squares = document.querySelectorAll(".square")
+let squares = document.querySelectorAll(".square");
+lightUp();
 
 btn.addEventListener("click", () => {
     let newDimensions = prompt("Enter a number from 1-100:");
     alert(`The new grid is ${newDimensions} x ${newDimensions}`);
+    totalSquares = newDimensions * newDimensions;
     removeAllChildNodes(container);
-    createGrid(newDimensions);
-})
-
-squares.forEach(item => {
-    item.addEventListener("mouseover", () => {
-        item.classList.toggle("hover");
+    createGrid(totalSquares);
+    squares = document.querySelectorAll(".square");
+    squares.forEach(square => {
+        square.style.width = `calc(100% / ${newDimensions})`;
+        square.style.height = `calc(100% / ${newDimensions})`;
     });
+    lightUp();
 });
+
 
 function removeAllChildNodes(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
     }
+}
+
+function lightUp(){
+    squares.forEach(square => {
+    square.addEventListener("mouseover", () => {
+        square.classList.toggle("hover");
+    });
+});
 }
 
 function createGrid(dimensions) {

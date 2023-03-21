@@ -1,6 +1,8 @@
 html,
 body {
     margin: 0px;
+    height: 100%;
+    width: 100%;
 }
 
 .btn {
@@ -13,14 +15,13 @@ body {
     font-weight: bold;
 }
 .container {
-    height: 100vh;
+    height: 100%;
     background-color: blue;
-    font-family: 'Courier New', Courier, monospace;
 }
 
 .square {
-    width: 25%;
-    height: 25%;
+    width: calc(100% / 16);
+    height: calc(100% / 16);
     outline: 1px solid;
     color: white;
     float: left;
