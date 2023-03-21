@@ -7,6 +7,11 @@ lightUp();
 
 btn.addEventListener("click", () => {
     let newDimensions = prompt("Enter a number from 1-100:");
+    console.log(typeof(newDimensions));
+    while (!/^[0-9]+$/.test(newDimensions)||newDimensions>100) {
+        alert("You did not enter a valid number");
+        newDimensions = prompt("Enter a number from 1-100: ");
+    }
     alert(`The new grid is ${newDimensions} x ${newDimensions}`);
     totalSquares = newDimensions * newDimensions;
     removeAllChildNodes(container);
